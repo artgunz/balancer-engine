@@ -11,15 +11,12 @@ import java.util.Collection;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Data
-public class Payment extends PanacheEntity {
-
-    @NotEmpty
-    private String tenantId;
+public class Payment extends BaseEntity {
 
     @NotEmpty
     private String value;
 
-    public static Collection<Payment> findAllToTenant(String tenantId) {
-        return Payment.list("tenantId", tenantId);
-    }
+//    public static Collection<Payment> findAllToTenant(String tenantId) {
+//        return Payment.list("tenantId", tenantId);
+//    }
 }
